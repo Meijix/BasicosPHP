@@ -1,22 +1,16 @@
-<!-- Crear un script que genere lo que se muestra en las siguientes imágenes considerando lo siguiente:
-
- Utilizar una variable para el máximo de filas que queremos (30 filas). en la imagen se muestran solo 10 filas
- Debe estar centrado.
- Pueden ocupar cualquier simbolo o imagen (en los ejemplos se ocupó Font Awesome)
- No se repite longitud en las filas. -->
+<!-- 
+Natalia Edith Mejia Bautista
+Tarea 1. Script que genere una piramide dado un simbolo y un número de filas -->
 
 <?php
-$filas = 10;
-$espacios = 30;
-$simbolo = "🌟"
+$filas = 20;
+$simbolo = "🌟";
+//recorrer las filas
     for ($i = 1; $i <= $filas; $i++) {
-    for ($j = 1; $j <= $espacios; $j++) {
-        if ($j == ($espacios / 2) - $i || $j == ($espacios / 2) + $i) {
-            echo $simbolo;
-        } else {
-            echo "&nbsp;";
-        }
-    }
-    echo "<br>";
+        //repetir el simbolo para la fila
+        $piramide = str_repeat($simbolo, $i);
+        //centrar la piramide
+        $pirCentrada = "<center>" . $piramide . "</center>";
+        echo $pirCentrada . "<br>";
 }
 ?>
