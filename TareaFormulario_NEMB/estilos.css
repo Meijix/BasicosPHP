@@ -1,0 +1,28 @@
+
+:root{
+    --colorFondo: #aee7ff;
+    --colorBorde: rgb(13, 13, 92);
+}
+
+.contenedor{
+    border: 5px solid var(--colorBorde);
+    background-color: var(--colorFondo);
+    padding: 5px 20px;
+    font-family: sans-serif;
+}
+
+h1{
+    color: var(--colorBorde);
+}
+
+.btn-ingresar{
+    background-color: #4CAF50;
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+
+.caja{
+    margin: 10px 0;
+    width: 100%;
+}

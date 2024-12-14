@@ -14,12 +14,13 @@
         <p>Ingresa tu numero de cuenta y contraseña</p>
         <form action="procesar_formulario.php" method="POST">
             <label for="usuario">Numero de cuenta:</label>
-            <input type="text" name="usuario" id="usuario" required>
+            <input class="caja" type="text" name="usuario" id="usuario" required>
             <br>
             <label for="password">Contraseña:</label>
-            <input type="password" name="password" id="password" required>
+            <input class="caja" type="password" name="password" id="password" required>
             <br>
-            <input type="submit" value="Ingresar">
+            <br>
+            <center><input class="btn-ingresar" type="submit" value="Ingresar"></center>
         </form>
     </div>
 </body>
