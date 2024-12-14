@@ -34,6 +34,7 @@ function rombo($filas, $simbolo){
     }
 }
 
+//llamada a las funciones
 $filas = 10;
 $simbolo = "🌟";
 echo "<h2> Natalia Edith Mejia Bautista </h2>";
