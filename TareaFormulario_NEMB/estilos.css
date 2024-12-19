@@ -1,14 +1,24 @@
 
+
 :root{
-    --colorFondo: #9198e5;
+    --colorFondo: #b4b9f6;
     --colorBorde: rgb(77, 2, 117);
+    --normal: 14px
+}
+
+body{
+    margin: 20;
+    padding: 10;
+    font-family: sans-serif;
+    font-size: var(--normal);
+    background-color: rgb(190, 225, 240);
 }
 
 .contenedor{
-    border: 5px solid var(--colorBorde);
+    border: 3px solid var(--colorBorde);
     background-color: var(--colorFondo);
     padding: 2px 20px;
-    font-family: sans-serif;
+    
 }
 
 h1{
@@ -20,11 +30,34 @@ h1{
     color: white;
     text-transform: capitalize;
     font-weight: 900;
-    width: 100px;
-    height: 50px;
+    width: 100%+30px;
+    height: 30px;
+    margin: 10px 0px;
+    border-radius: 15px;
+    font-size: var(--normal);
+    border: none;
 }
 
 .caja{
     margin: 10px 0;
     width: 100%;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--colorBorde);
+    padding: 20px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+input, select, option{
+    height: 20px;
+    width: 30%;
+    border-radius: 10px;
+    border: 1px solid var(--colorBorde);
+    padding: 5px;
+    margin: 5px 0;
+    font-size: var(--normal);
 }
