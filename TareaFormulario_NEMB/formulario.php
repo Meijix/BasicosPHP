@@ -1,3 +1,5 @@
+<!-- http://127.0.0.1/PHP-Naty/CursoDGTIC/BasicosPHP/TareaFormulario_NEMB/formulario.php -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,7 +27,7 @@
             <br>
             <label for="genero">Género:</label>
             <select name="genero" required>
-                <option value="">Seleccione Género</option>
+                <option value="">Seleccione uno</option>
                 <option value="M">Hombre</option>
                 <option value="F">Mujer</option>
                 <option value="O">Otro</option>

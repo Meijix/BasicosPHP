@@ -1,12 +1,12 @@
 
-/* :root{
+:root{
     --colorFondo: #9198e5;
-    --colorBorde: rgb(8, 8, 15);
-} */
+    --colorBorde: rgb(77, 2, 117);
+}
 
 .contenedor{
-    border: 5px solid purple;
-    background-color: pink;
+    border: 5px solid var(--colorBorde);
+    background-color: var(--colorFondo);
     padding: 2px 20px;
     font-family: sans-serif;
 }
@@ -21,7 +21,7 @@ h1{
     text-transform: capitalize;
     font-weight: 900;
     width: 100px;
-    height: 30px;
+    height: 50px;
 }
 
 .caja{

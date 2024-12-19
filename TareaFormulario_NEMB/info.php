@@ -1,3 +1,5 @@
+<!-- http://127.0.0.1/PHP-Naty/CursoDGTIC/BasicosPHP/TareaFormulario_NEMB/info.php -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +9,7 @@
     <title>Información alumnos</title>
 </head>
 <body>
-    <div class="contenedor user-info">
+    <div class="contenedor">
         <h2>Mi informacion</h2>
             <p><strong>Nombre completo:</strong> </p>
             <p><strong>Número de Cuenta:</strong> </p>
