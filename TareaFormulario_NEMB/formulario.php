@@ -37,7 +37,7 @@
             <label for="contrasena">Contraseña</label>
             <input type="password" name="contrasena" placeholder="12341234@" required>
             <br>
-            <center><button type="submit">Registrarme</button></center>
+            <center><button class="btn-ingresar" type="submit">Registrarme</button></center>
             
         </form>
         <a href="info.php">Ver información</a>
