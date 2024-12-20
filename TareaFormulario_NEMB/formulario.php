@@ -15,12 +15,14 @@ if(isset($_POST['num_cta'])) {
         'contrasena' => $_POST['contrasena'],
         'fecha_nac' => $_POST['fec_nac']
     ];
+    if (isset($_SESSION['alumnosRegistrados'][$_POST['num_cta']])) {
+        echo "<div class='exito'> Datos guardados correctamente </div>";
+    } else {
+        echo "<div class='error'> Error al guardar los datos </div>";
+    }
     //print_r($_SESSION['alumnosRegistrados']);
-    echo "<div class='exito'> Datos guardados correctamente </div>";
     //header('Location: login.php');
-} else {
-    echo "<div class='error'>No se han recibido datos</div>";
-}
+} 
 ?>
 <!DOCTYPE html>
 <html lang="es">
