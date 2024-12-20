@@ -1,5 +1,6 @@
 <!-- http://127.0.0.1/PHP-Naty/CursoDGTIC/BasicosPHP/TareaFormulario_NEMB/info.php -->
 <?php 
+session_start();
 require_once('usuario.php');
 ?> 
 <!DOCTYPE html>
@@ -13,17 +14,30 @@ require_once('usuario.php');
 <body>
     <div class="contenedor">
         <h2>Mi informacion</h2>
-            <p><strong>Nombre completo:</strong><?php echo $_SESSION['login']['num_cta']; ?></p>
-            <p><strong>Número de Cuenta:</strong> </p>
-            <p><strong>Fecha de Nacimiento:</strong> </p>
-        </div>
+            <p><strong>Nombre completo:</strong> <?php echo $_SESSION['login']['nombre']; ?></p>
+            <p><strong>Número de Cuenta:</strong> <?php echo $_SESSION['login']['num_cta']; ?></p>
+            <p><strong>Fecha de Nacimiento:</strong> <?php echo $_SESSION['login']['fecha_nac']; ?></p>
+    </div>
+    <!--  Tabla de usuarios registrados -->
+    <div>
         <h3>Usuarios registrados</h3>
-        <ul>
-            <li>Número de Cuenta: 1, Nombre: Admin General, Fecha de Nacimiento: 01/01/2000</li>
-            <!-- Aquí se pueden agregar más usuarios si es necesario -->
-        </ul>
-        <a href="formulario.php">Ir a Formulario</a>
-        <a href="logout.php">Cerrar Sesión</a>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Numero de cuenta</th>
+                <th>Fecha de nacimiento</th>
+            </tr>
+            <?php foreach ($_SESSION['alumnosRegistrados'] as $alumno) { ?>
+                <tr>
+                    <td><?php echo $alumno['nombre'] . ' ' . $alumno['primer_apellido'] . ' ' . $alumno['segundo_apellido']; ?></td>
+                    <td><?php echo $alumno['num_cta']; ?></td>
+                    <td><?php echo $alumno['fecha_nac']; ?></td>
+                </tr>
+            <?php } ?>
+        </table>
+
+    <a href="formulario.php">Ir a Formulario</a>
+    <a href="logout.php">Cerrar Sesión</a>
     </div>
 
 </body>

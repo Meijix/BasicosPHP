@@ -1,18 +1,24 @@
 <?php
-include_once 'usuario.php';
-
+session_start();
+include_once 'usuario.php'; // Include the file where the user data is stored
+print_r($_POST); 
 if(isset($_POST['entrar'])) {
-    $alumno = isset($_SESSION['Alumno'][$_POST['num_cta']]) ? $_SESSION['Alumno'][$_POST['num_cta']] : [];
-    if ($alumno != [] && $_POST['num_cta'] == $alumno['num_cta'] &&  $_POST['contrasena'] == $alumno['contrasena']) {
+    // Buscar al alumno en la lista de alumnos registrados
+    $alumno = isset($_SESSION['alumnosRegistrados'][$_POST['num_cuenta_ingresada']]) ? $_SESSION['alumnosRegistrados'][$_POST['num_cuenta_ingresada']] : [];
+    
+    /* print_r($alumno); */
+    if ($alumno!=[] && $_POST['num_cuenta_ingresada'] == $alumno['num_cta'] &&  $_POST['contrasena_ingresada'] == $alumno['contrasena']) {
         $_SESSION['login'] = [
-            'nombre' => $alumno['nombre'] . ' ' . $alumno['primer_apellido'],
+            'nombre' => $alumno['nombre'] . ' ' . $alumno['primer_apellido'].' '.$alumno['segundo_apellido'], 
             'num_cta' => $alumno['num_cta'], 
             'fecha_nac' => $alumno['fecha_nac'], 
         ];
+        print_r($_SESSION['login']);
         header('Location: info.php');
         exit(); // Ensure no further code is executed after redirection
     } else {
-        echo 'Usuario o contraseña incorrectos';
+        // If the user is not found, display an error message
+        echo 'Error: Cuenta no encontrada o contraseña incorrecta';
     }    
 }
 ?>
@@ -31,14 +37,14 @@ if(isset($_POST['entrar'])) {
         <h1>Inicia sesion</h1>
         <p>Ingresa tu numero de cuenta y contraseña</p>
         <form action="login.php" method="POST">
-            <label for="usuario">Numero de cuenta:</label>
-            <input class="caja" type="text" name="usuario" id="usuario" required>
+            <label for="num_cuenta">Numero de cuenta:</label>
+            <input class="caja" type="text" name="num_cuenta_ingresada" id="num_cuenta" placeholder='123123' required>
             <br>
             <label for="password">Contraseña:</label>
-            <input class="caja" type="password" name="password" id="password" required>
+            <input class="caja" type="password" name="contrasena_ingresada" id="password" placeholder="Ingrese su contraseña" required>
             <br>
             <br>
-            <center><input class="btn-ingresar" type="submit" value="Ingresar"></center>
+            <center><input class="btn-ingresar" type="submit" value="Ingresar" name="entrar"></center>
         </form>
 
         <a href="formulario.php">Registrarse</a>
