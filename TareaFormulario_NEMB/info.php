@@ -1,7 +1,8 @@
 <!-- http://127.0.0.1/PHP-Naty/CursoDGTIC/BasicosPHP/TareaFormulario_NEMB/info.php -->
 <?php 
-session_start();
+
 require_once('usuario.php');
+session_start();
 ?> 
 <!DOCTYPE html>
 <html lang="en">
