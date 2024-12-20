@@ -8,19 +8,18 @@ $_SESSION['alumnosRegistrados'] = [
         "genero" => "O",
         "contrasena" => "admin123",
         "fecha_nac" => "2020-01-01"
-    ]
-];
-/* [
-    2 => [
+    ],
+    //Agregar otro usuario precargado
+    317737822 => [
         'num_cta' => 317737822,
         'nombre' => "Natalia",
-        "primer_apellido" => "Edith",
-        "segundo_apellido" => "Mejia",
-        "genero" => "F",
+        "primer_apellido" => "Mejia",
+        "segundo_apellido" => "Bautista",
+        "genero" => "O",
         "contrasena" => "naty123",
-        "fecha_nac" => "2001-01-01"
+        "fecha_nac" => "2020-08-30"
     ]
-]; */
+];
 
 /* print_r($_SESSION); */
 

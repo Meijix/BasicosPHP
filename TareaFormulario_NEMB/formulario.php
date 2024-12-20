@@ -2,6 +2,25 @@
 <?php
 session_start();
 include_once 'usuario.php';
+
+//print_r($_SESSION);
+//Guardar datos del formulario en la variable de sesión
+if(isset($_POST['num_cta'])) {
+    $_SESSION['alumnosRegistrados'][$_POST['num_cta']] = [
+        'num_cta' => $_POST['num_cta'],
+        'nombre' => $_POST['nombre'],
+        'primer_apellido' => $_POST['primer_apellido'],
+        'segundo_apellido' => $_POST['segundo_apellido'],
+        'genero' => $_POST['genero'],
+        'contrasena' => $_POST['contrasena'],
+        'fecha_nac' => $_POST['fec_nac']
+    ];
+    print_r($_SESSION['alumnosRegistrados']);
+    echo "Datos guardados correctamente";
+    //header('Location: login.php');
+} else {
+    echo "No se han recibido datos";
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -44,8 +63,9 @@ include_once 'usuario.php';
             <br>
             <center><button class="btn-ingresar" type="submit">Registrarme</button></center>
         </form>
-        <a href="info.php">Ver información</a>
-        <a href="logout.php">Cerrar Sesión</a>
+        <a href="login.php">Iniciar Sesión</a>
+<!--         <a href="info.php">Ver información</a>
+        <a href="logout.php">Cerrar Sesión</a> -->
         
     </div>
 
