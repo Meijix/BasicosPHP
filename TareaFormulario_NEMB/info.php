@@ -21,7 +21,7 @@ require_once('usuario.php');
     <!--  Tabla de usuarios registrados -->
     <div>
         <h3>Usuarios registrados</h3>
-        <table>
+        <table class="tabla_usuarios">
             <tr>
                 <th>Nombre</th>
                 <th>Numero de cuenta</th>
