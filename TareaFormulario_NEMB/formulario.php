@@ -50,4 +50,8 @@ include_once 'usuario.php';
     </div>
 
 </body>
+<footer>
+    <p>Desarrollado por Natalia Edith Mejia Bautista</p>
+    <p>Curso de PHP DGTIC. Diciembre 2024</p>
+</footer>
 </html>

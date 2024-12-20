@@ -111,3 +111,16 @@ input, select, option{
 .tabla_usuarios td {
     border-bottom: 1px solid #dddddd;
 }
+
+footer{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+img{
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin: 10px;
+}
