@@ -16,10 +16,10 @@ if(isset($_POST['num_cta'])) {
         'fecha_nac' => $_POST['fec_nac']
     ];
     //print_r($_SESSION['alumnosRegistrados']);
-    echo "Datos guardados correctamente";
+    echo "<div class='exito'> Datos guardados correctamente </div>";
     //header('Location: login.php');
 } else {
-    echo "No se han recibido datos";
+    echo "<div class='error'>No se han recibido datos</div>";
 }
 ?>
 <!DOCTYPE html>

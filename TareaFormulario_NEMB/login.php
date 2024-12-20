@@ -21,7 +21,7 @@ if(isset($_POST['entrar'])) {
         exit(); // Ensure no further code is executed after redirection
     } else {
         // If the user is not found, display an error message
-        echo 'Error: Cuenta no encontrada o contraseña incorrecta';
+        echo "<div class='error'> Error: Numero de cuenta no encontrado o contraseña incorrecta </div>";
     }    
 }
 ?>
