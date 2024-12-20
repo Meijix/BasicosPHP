@@ -5,6 +5,8 @@
     --colorBorde: rgb(77, 2, 117);
     --colorBoton: #1f6f2b;
     --colorBoton: rgb(77, 2, 117);
+    --colorHover: rgb(229, 182, 255);
+    -colorAlternativo: #ffd6f2;
     --normal: 14px
 }
 
@@ -69,14 +71,28 @@ a:hover{
 }
 
 input, select, option{
-    height: 20px;
-    width: 30%;
+    height: 18px;
+    width: 100%;
     border-radius: 10px;
     border: 1px solid var(--colorBorde);
     padding: 5px;
     margin: 5px 0;
     font-size: var(--normal);
 }
+/* Estilo de select */
+
+select{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--colorBorde);
+    padding: 5px;
+    margin: 5px 0;
+    font-size: var(--normal);
+}
+
+
+
 /* Tabla de usuarios */
 .tabla_usuarios {
     width: 100%;
@@ -98,10 +114,8 @@ input, select, option{
     background-color: var(--colorPrimario);
     color: #ffffff;
     font-weight: bold;
-}
-
-.tabla_usuarios tr:nth-child(even) {
-    background-color: var(--colorFondoAlternativo);
+    text-transform: uppercase;
+    background-color: var(--colorBorde);
 }
 
 .tabla_usuarios tr:hover {
@@ -109,7 +123,7 @@ input, select, option{
 }
 
 .tabla_usuarios td {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
 }
 
 footer{
@@ -119,7 +133,7 @@ footer{
 }
 
 img{
-    width: 50%;
+    width: 70%;
     height: auto;
     border-radius: 50%;
     margin: 10px;
