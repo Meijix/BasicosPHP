@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once 'usuario.php'; // Include the file where the user data is stored
-print_r($_POST); 
+/* print_r($_POST);  */
 if(isset($_POST['entrar'])) {
     // Buscar al alumno en la lista de alumnos registrados
     $alumno = isset($_SESSION['alumnosRegistrados'][$_POST['num_cuenta_ingresada']]) ? $_SESSION['alumnosRegistrados'][$_POST['num_cuenta_ingresada']] : [];
@@ -13,7 +13,7 @@ if(isset($_POST['entrar'])) {
             'num_cta' => $alumno['num_cta'], 
             'fecha_nac' => $alumno['fecha_nac'], 
         ];
-        print_r($_SESSION['login']);
+        /* print_r($_SESSION['login']); */
         header('Location: info.php');
         exit(); // Ensure no further code is executed after redirection
     } else {
