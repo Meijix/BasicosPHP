@@ -1,5 +1,7 @@
 <!-- http://127.0.0.1/PHP-Naty/CursoDGTIC/BasicosPHP/TareaFormulario_NEMB/formulario.php -->
-
+<?php
+include_once 'usuario.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

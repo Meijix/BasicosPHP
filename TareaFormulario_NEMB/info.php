@@ -1,5 +1,7 @@
 <!-- http://127.0.0.1/PHP-Naty/CursoDGTIC/BasicosPHP/TareaFormulario_NEMB/info.php -->
-
+<?php 
+require_once('usuario.php');
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
 <body>
     <div class="contenedor">
         <h2>Mi informacion</h2>
-            <p><strong>Nombre completo:</strong> </p>
+            <p><strong>Nombre completo:</strong><?php echo $_SESSION['login']['num_cta']; ?></p>
             <p><strong>Número de Cuenta:</strong> </p>
             <p><strong>Fecha de Nacimiento:</strong> </p>
         </div>
