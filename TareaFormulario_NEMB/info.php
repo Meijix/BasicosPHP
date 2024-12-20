@@ -15,7 +15,9 @@ session_start();
 <body>
     <div class="contenedor">
         <h2>Mi informacion</h2>
+            <img src="https://i.pravatar.cc/128" alt="foto de perfil" class="foto_perfil">
             <p><strong>Nombre completo:</strong> <?php echo $_SESSION['login']['nombre']; ?></p>
+        
             <p><strong>Número de Cuenta:</strong> <?php echo $_SESSION['login']['num_cta']; ?></p>
             <p><strong>Fecha de Nacimiento:</strong> <?php echo $_SESSION['login']['fecha_nac']; ?></p>
     </div>

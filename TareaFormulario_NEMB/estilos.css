@@ -158,3 +158,10 @@ img{
     background-color: #e6ffe6;
     border-radius: 5px;
 }
+
+.foto_perfil{
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin: 10px;
+}
