@@ -3,7 +3,7 @@
 include_once 'usuario.php'; // Include the file where the user data is stored
 session_start(); // Start the session
 /* print_r($_POST);  */
-print_r($_SESSION['alumnosRegistrados']);
+//print_r($_SESSION['alumnosRegistrados']);
 // Check if the form has been submitted
 if(isset($_POST['entrar'])) {
     // Buscar al alumno en la lista de alumnos registrados

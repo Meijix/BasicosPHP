@@ -15,7 +15,7 @@ if(isset($_POST['num_cta'])) {
         'contrasena' => $_POST['contrasena'],
         'fecha_nac' => $_POST['fec_nac']
     ];
-    print_r($_SESSION['alumnosRegistrados']);
+    //print_r($_SESSION['alumnosRegistrados']);
     echo "Datos guardados correctamente";
     //header('Location: login.php');
 } else {
