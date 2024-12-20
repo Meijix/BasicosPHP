@@ -40,14 +40,20 @@ if(isset($_POST['entrar'])) {
         <h1>Inicia sesion</h1>
         <p>Ingresa tu numero de cuenta y contraseña</p>
         <form action="login.php" method="POST">
+
+            <div class="contenedor-input">
             <label for="num_cuenta">Numero de cuenta:</label>
             <input class="caja" type="text" name="num_cuenta_ingresada" id="num_cuenta" placeholder='123123' required>
-            <br>
+            </div>
+
+            <div class="contenedor-input">
             <label for="password">Contraseña:</label>
             <input class="caja" type="password" name="contrasena_ingresada" id="password" placeholder="Ingrese su contraseña" required>
-            <br>
-            <br>
+            </div>
+
+            <div class="contenedor-input">
             <center><input class="btn-ingresar" type="submit" value="Ingresar" name="entrar"></center>
+            </div>
         </form>
 
         <a href="formulario.php">Registrarse</a>
